@@ -26,12 +26,12 @@ process. This hurdle can heavily hinder the development of this field. To addres
   </div>
 
   <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #e74c3c;">
-    <h3>🎧 Light-weight network design</h3>
+    <h3>⚡ Light-weight network design</h3>
     <p> 7.65 M • 42.92 GMACs/5s per NFE</p>
   </div>
   
   <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #2ecc71;">
-    <h3>⚡Impressive performance-inference balance</h3>
+    <h3>🎧Impressive performance-inference balance</h3>
     <p> The best vocoder performance up to now (e.g., PESQ 4.4+ for NFE=4 and PESQ 4.3+ for NFE=1), support for both few- (NFE=4) and single-step setups.</p>
   </div>
 </div>
