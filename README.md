@@ -32,7 +32,7 @@ process. This hurdle can heavily hinder the development of this field. To addres
   
   <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #2ecc71;">
     <h3>⚡Impressive performance-inference balance</h3>
-    <p> The best performance up to now (e.g., PESQ 4.4+), support for both few- (NFE=4) and single-step setups.</p>
+    <p> The best vocoder performance up to now (e.g., PESQ 4.4+), support for both few- (NFE=4) and single-step setups.</p>
   </div>
 </div>
 
