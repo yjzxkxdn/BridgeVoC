@@ -79,14 +79,18 @@ class BCD(nn.Module):
       self.use_adanorm = use_adanorm
       self.causal = causal
 
-      self.enc = SharedBandSplit_NB24_24k(input_channel=self.input_channel,
+      self.enc = SharedBandSplit(input_channel=self.input_channel,
                                           feature_dim=self.hidden_channel,
+                                          freq_split_ratio = [9, 12, 11],
+                                          band_num_list = [12, 8, 4],
                                           use_adanorm=self.use_adanorm,
                                           causal=self.causal,
                                           )
       self.nband = self.enc.get_nband()
-      self.dec = SharedBandMerge_NB24_24k(nband=self.nband,
+      self.dec = SharedBandMerge(nband=self.nband,
                                           feature_dim=self.hidden_channel,
+                                          freq_split_ratio = [9, 12, 11],
+                                          band_num_list = [12, 8, 4],
                                           use_adanorm=self.use_adanorm,
                                           decode_type=self.decode_type)
 
