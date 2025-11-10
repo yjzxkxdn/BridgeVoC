@@ -113,17 +113,12 @@ class BandwiseC2LayerNorm(nn.Module):
       input: (B, C, nband, T)
       return: (B, C, nband, T)
       """
-      print("norm.py:BandwiseC2LayerNorm:input.shape",input.shape)
       mean_ = torch.mean(input, dim=1, keepdim=True)  # (B, 1, nband, T)
-      print("norm.py:BandwiseC2LayerNorm:mean_.shape",mean_.shape)
       std_ = torch.sqrt(torch.var(input, dim=1, unbiased=False, keepdim=True) + self.eps)  # (B, 1, nband, T)
-      print("norm.py:BandwiseC2LayerNorm:std_.shape",std_.shape)
       
       if self.affine:
          output = self.gain_matrix * ((input - mean_) / std_) + self.bias_matrix 
-         print("norm.py:BandwiseC2LayerNorm if self.affine:output.shape",output.shape)
       else:
          output = (input - mean_) / std_
-         print("norm.py:BandwiseC2LayerNorm:output.shape",output.shape)
       
       return output
